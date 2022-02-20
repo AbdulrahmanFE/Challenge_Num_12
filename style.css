@@ -101,7 +101,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 7px;
+    border-radius: 10px;
     transition: 0.3s;
   }
   .list > li:hover {
@@ -110,7 +110,7 @@
 /* Styling The storage Container*/
   .storage-container {
     width: 550px;
-    height: 155px;
+    height: 152px;
     background-color: var(--DarkBlue);
     margin-top: auto;
     display: flex;
@@ -190,7 +190,7 @@
   }
   .gb-left {
     color: var(--VeryDarkBlue);
-    font-size: 38px;
+    font-size: 38.4px;
     font-weight: 700;
     text-align: center;
   }
