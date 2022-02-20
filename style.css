@@ -1,0 +1,238 @@
+/* Variables */
+:root {
+  /* ---- Primary ---- */
+  --Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+  /* ---- Neutral ---- */
+  --PaleBlue: hsl(243, 100%, 93%);
+  --GrayishBlue: hsl(229, 7%, 55%);
+  --DarkBlue: hsl(228, 56%, 26%);
+  --VeryDarkBlue: hsl(229, 57%, 11%);
+}
+/* To Tackle The Accessibility Issue */
+  .hidden {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+  }
+/* Global Rules */
+  * {
+    padding: 0;
+    margin: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  a {
+    text-decoration: none;
+  }
+  ul {
+    list-style: none;
+  }
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    Font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--VeryDarkBlue);
+  }
+  @media (min-width: 768px) {
+    body {
+      background-image: url(images/bg-desktop.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: bottom right;
+    }
+  }
+  @media (max-width: 767px) {
+    body {
+      background-image: url(images/bg-mobile.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+/* Styling The container */
+  .container {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+  @media (max-width: 991px){
+    .container {
+      flex-direction: column;
+    }
+  }
+/* Styling The Fylo Container*/
+  .fylo-container {
+    width: 350px;
+    height: 200px;
+    background-color: var(--DarkBlue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 0 40px;
+    border-radius: 8px 100px 8px 8px;
+  }
+  .list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+  }
+  .list > li {
+    width: 40px;
+    height: 40px;
+    background-color: var(--VeryDarkBlue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    transition: 0.3s;
+  }
+  .list > li:hover {
+    transform: scale(1.075);
+  }
+/* Styling The storage Container*/
+  .storage-container {
+    width: 550px;
+    height: 150px;
+    background-color: var(--DarkBlue);
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 0 40px;
+    position: relative;
+  }
+  .used {
+    color: var(--GrayishBlue);
+  }
+  .used > span {
+    color: var(--PaleBlue);
+  }
+  .prog-holder {
+    background-color: var(--VeryDarkBlue);
+    height: 20px;
+    width: 100%;
+    position: relative;
+    margin: 20px auto 5px;
+    border-radius: 10px;
+    border: 3px solid var(--VeryDarkBlue);
+  }
+  .prog-holder > span {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    border-radius: 10px;
+  }
+  .prog-holder > span::after {
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    background-color: white;
+    border-radius: 50%;
+    left: 96%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .gb {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .gb > li {
+    color: var(--PaleBlue);
+    font-weight: 700;
+  }
+  .prog-info {
+    position: absolute;
+    border-radius: 8px 8px 0 8px;
+    max-width: 175px;
+    min-width: 80px;
+    width: 90%;
+    left: 77%;
+    top: -25%;
+    transform: translate(-50%, 0);
+    background-color: white;
+    padding: 13px;
+  }
+  .prog-info::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    right: 0px;
+    border-top: 0;
+    border-bottom: 40px solid transparent;
+    border-right: 50px solid white
+  }
+  .gb-left {
+    color: var(--VeryDarkBlue);
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+  }
+  .gb-left > span{
+    color: var(--GrayishBlue);
+    text-transform: uppercase;
+    font-size: 13px;
+    vertical-align: middle;
+  }
+/* Making The Design Responsive */
+@media (max-width: 991px) {
+  .fylo-container {
+    width: 95%;
+  }
+  .storage-container {
+    width: 95%;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    width: 80%;
+  }
+  .prog-info {
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, 0);
+    border-bottom-right-radius: 8px;
+  }
+  .prog-info::after {
+    display: none;
+  }
+}
+@media (max-width: 625px) {
+  .container {
+    width: 90%;
+  }
+}
+@media (min-width: 401px) and (max-width: 535px) {
+  .prog-holder > span::after {
+    left: 94.5%;
+  }
+}
+@media (max-width: 400px) {
+  .prog-holder > span::after {
+    left: 93%;
+  }
+}
