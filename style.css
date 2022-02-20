@@ -84,7 +84,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 30px;
+    gap: 29px;
     padding: 0 45px;
     border-radius: 8px 100px 8px 8px;
   }
@@ -95,8 +95,8 @@
     gap: 15px;
   }
   .list > li {
-    width: 45px;
-    height: 45px;
+    width: 48px;
+    height: 48px;
     background-color: var(--VeryDarkBlue);
     display: flex;
     align-items: center;
@@ -119,6 +119,7 @@
     justify-content: center;
     border-radius: 10px;
     padding: 0 45px;
+    box-shadow: 0 0 12px var(--VeryDarkBlue);
     position: relative;
   }
   .used {
@@ -126,13 +127,14 @@
   }
   .used > span {
     color: white;
+    font-weight: 700;
   }
   .prog-holder {
     background-color: var(--VeryDarkBlue);
     height: 20px;
     width: 100%;
     position: relative;
-    margin: 15px auto 5px;
+    margin: 15px auto 6px;
     border-radius: 10px;
     border: 3px solid var(--VeryDarkBlue);
   }
