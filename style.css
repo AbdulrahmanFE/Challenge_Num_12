@@ -85,7 +85,7 @@
     justify-content: center;
     align-items: flex-start;
     gap: 30px;
-    padding: 0 40px;
+    padding: 0 45px;
     border-radius: 8px 100px 8px 8px;
   }
   .list {
@@ -110,7 +110,7 @@
 /* Styling The storage Container*/
   .storage-container {
     width: 550px;
-    height: 150px;
+    height: 155px;
     background-color: var(--DarkBlue);
     margin-top: auto;
     display: flex;
@@ -132,7 +132,7 @@
     height: 20px;
     width: 100%;
     position: relative;
-    margin: 20px auto 5px;
+    margin: 15px auto 5px;
     border-radius: 10px;
     border: 3px solid var(--VeryDarkBlue);
   }
@@ -164,7 +164,8 @@
   }
   .gb > li {
     color: var(--PaleBlue);
-    font-weight: 400;
+    font-weight: 700;
+    font-size: 13px;
   }
   .prog-info {
     position: absolute;
@@ -173,7 +174,7 @@
     min-width: 80px;
     width: 90%;
     left: 77%;
-    top: -25%;
+    top: -30%;
     transform: translate(-50%, 0);
     background-color: white;
     padding: 13px;
@@ -189,7 +190,7 @@
   }
   .gb-left {
     color: var(--VeryDarkBlue);
-    font-size: 35px;
+    font-size: 38px;
     font-weight: 700;
     text-align: center;
   }
